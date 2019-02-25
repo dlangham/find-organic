@@ -1,0 +1,7 @@
+Options -MultiViews
+RewriteEngine on
+RewriteBase /
+
+# DirectoryIndex views/landing.php
+# RewriteRule ^/?$ /views/landing.php [NC]
+# RewriteRule ^home/?$ /views/landing.php [NC]
