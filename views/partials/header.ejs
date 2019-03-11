@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Organic</title>
+    <link href="/styles/lib/bootstrap-reboot.css" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar-f">
+
+    <a class="brand" href="/">Find Organic</a>
+
+    <ul class="nav-links">
+            <li><a href="/growers">See All Growers</a></li>
+        <% if(!currentUser) { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign Up</a></li>
+        <% } else { %>
+            <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% } %>
+    </ul>
+
+</nav>
+
+
+<div class="container">
+    <% if(messageSuccess && messageSuccess.length > 0) { %>
+        <div class="alert alert-success" role="alert">
+            <%= messageSuccess %>
+        </div> 
+    <% } %>
+    <% if(messageError && messageError.length > 0) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= messageError %>
+        </div>
+    <% } %>
+</div>

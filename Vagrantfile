@@ -65,12 +65,21 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y apache2
+    sudo rm -rf /var/www/html
+    sudo rm -rf /var/www
+    sudo mkdir /var/www
+    sudo ln -fs /vagrant/public /var/www/html
+  SHELL
   # config.vm.provision "shell", inline: <<-SHELL
-  config.vm.provision :shell, path: "vm_provision.sh"
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  #config.vm.provision :shell, path: "vm_provision.sh"
   #
   # Speed up VM performance dramatically via rsync.
-  config.vm.synced_folder "./app/", "/var/www/html", type: "rsync", rsync__exclude: ".git/", rsync__args: ["--verbose", "--archive", "--delete", "-z"]
+  config.vm.synced_folder "./public", "/var/www/html", type: "rsync", rsync__exclude: ".git/", rsync__args: ["--verbose", "--archive", "--delete", "-z"]
 end

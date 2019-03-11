@@ -1,0 +1,77 @@
+ul {
+  list-style-type: none;
+  margin-bottom: 0; }
+
+figure {
+  margin: 0; }
+
+h4 {
+  font-size: 1.5em; }
+
+.colophon {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #525252;
+  color: whitesmoke; }
+  .colophon > * {
+    margin: auto; }
+
+.navbar-f {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .navbar-f .brand {
+    flex: 1 0 auto; }
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 auto; }
+
+.growers-g {
+  display: grid; }
+  .growers-g .card {
+    text-align: center; }
+  .growers-g .btn {
+    background-color: #347ff8;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px; }
+  @media only screen and (max-width: 767.98px) {
+    .growers-g {
+      grid-template-columns: 1fr;
+      grid-gap: 20px; }
+      .growers-g img {
+        max-width: 92%; } }
+  @media only screen and (min-width: 768px) {
+    .growers-g {
+      grid-template-columns: 1fr 1fr 1fr; }
+      .growers-g .card {
+        max-width: 30vw; }
+        .growers-g .card figure {
+          overflow: hidden; }
+        .growers-g .card img {
+          width: 100%; } }
+
+/* BS VERSION ************/
+.page {
+  margin-top: 1.6em; }
+
+#grower-cards .card {
+  margin: 10px;
+  text-align: center; }
+  #grower-cards .card img {
+    width: 320px;
+    height: 240px; }
+
+/*# sourceMappingURL=style.css.map */
