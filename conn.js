@@ -1,4 +1,4 @@
-const connDev = require('./conn-dev');
+const connDev = require('./conn-dev') || {};
 
 const conn = {};
 
