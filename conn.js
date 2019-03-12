@@ -1,23 +1,27 @@
-const connDev = require('./conn-dev') || {};
-
 const conn = {};
 
-conn.development = {
-    // //url to be used in link generation
-    // url: 'http://my.site.com',
+//check if conn-dev.js exists (ie. on local dev env)
+if ( require('fs').existsSync('./conn-dev.js') ) {
 
-    db: {
-        host: connDev.host,
-        name: connDev.dbname,
-        user: connDev.user,
-        pass: encodeURIComponent(connDev.password)
-    },
-    server: {
-        host: 'localhost',
-        port: '3000'
-    }
-
-};
+    const connDev = require('./conn-dev') || {};
+    
+    conn.development = {
+        // //url to be used in link generation
+        // url: 'http://my.site.com',
+        
+        db: {
+            host: connDev.host,
+            name: connDev.dbname,
+            user: connDev.user,
+            pass: encodeURIComponent(connDev.password)
+        },
+        server: {
+            host: 'localhost',
+            port: '3000'
+        }
+        
+    };
+} else { conn.development = {}; }
 
 conn.production = {
     // //url to be used in link generation
