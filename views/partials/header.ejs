@@ -6,23 +6,40 @@
     <link href="/styles/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="topstyle"></div>
 <nav class="navbar-f">
 
     <a class="brand" href="/">Find Organic</a>
+    <div id="mobile-menu">
 
-    <ul class="nav-links">
+            <ul class="nav-links">
+                    <li><a href="/growers">See All Growers</a></li>
+                <% if(!currentUser) { %>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Sign Up</a></li>
+                <% } else { %>
+                    <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+    </div>
+
+    <div id="wide-menu">
+
+        <ul class="nav-links">
             <li><a href="/growers">See All Growers</a></li>
-        <% if(!currentUser) { %>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Sign Up</a></li>
-        <% } else { %>
-            <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
-            <li><a href="/logout">Logout</a></li>
-        <% } %>
-    </ul>
-
+            <% if(!currentUser) { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Sign Up</a></li>
+            <% } else { %>
+                <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+        </ul>
+                
+    </div>
 </nav>
-
+<div class="topstyle"></div>
 
 <div class="container">
     <% if(messageSuccess && messageSuccess.length > 0) { %>
@@ -36,3 +53,4 @@
         </div>
     <% } %>
 </div>
+<div class="page">

@@ -1,38 +1,39 @@
 <% include ../partials/header %>
 
-<div>
-    <header>
-            <div>
-            <h1>List of Growers</h1>
-            <p>View our selected growers from all over the world</p>
-            <p>
-                <a href="/growers/new">Add A Grower</a>
-            </p>
-        </div>
-    </header>
+<header>
+    <div>
+        <h1>List of Growers</h1>
+        <p>View our selected growers from all over the world</p>
+        <p>
+            <a href="/growers/new">Add A Grower</a>
+        </p>
+    </div>
+</header>
 
+<main>
     <div class="growers-g">
         <% growers.forEach((grower) => { %>
-                <div class="card"><!--card-->
+            <div class="card">
 
-                <!-- <div class="thumbnail"> -->
-                    <figure>
-                        <img src="<%= './images/' + grower.image %>">
-                    </figure>
-                    <h4><%= grower.name %></h4>
-                    <p>
-                        <a href="/growers/<%= grower._id %>" class="btn btn-primary">More Info</a>
-                    </p>
-                <!-- </div> -->
-                    
-                </div>
-                <!-- /.card -->
-        
+                <figure>
+                    <img src="<%= './images/' + grower.image %>">
+                </figure>
+
+                <h4>
+                    <%= grower.name %>
+                </h4>
+
+                <p>
+                    <a href="/growers/<%= grower._id %>" class="btn btn-primary">More Info</a>
+                </p>
+                
+            </div>
+            <!-- /.card -->
         <% }); %>
         
     </div>
-    <!-- /.grid -->
+    <!-- /.growers-g -->
     
-</div>
+</main>
 
 <% include ../partials/footer %>

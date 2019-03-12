@@ -8,35 +8,56 @@ figure {
 h4 {
   font-size: 1.5em; }
 
-.colophon {
-  height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #525252;
-  color: whitesmoke; }
-  .colophon > * {
-    margin: auto; }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #367f24;
+  font-weight: bold; }
+
+.topstyle {
+  height: 20px;
+  background-color: #669f56; }
 
 .navbar-f {
+  background-color: #669f56;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-top: 50px;
   padding-left: 30px;
   padding-right: 30px; }
-  .navbar-f .brand {
-    flex: 1 0 auto; }
+  .navbar-f a:link,
+  .navbar-f a:visited,
+  .navbar-f a:hover,
+  .navbar-f a:active {
+    color: white;
+    font-weight: inherit; }
 
-.nav-links {
+.brand {
+  font-size: 1.6em; }
+
+#wide-menu .nav-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1 0 auto; }
+  justify-content: flex-end;
+  align-items: center; }
+  #wide-menu .nav-links > li {
+    margin-left: 20px; }
+
+@media only screen and (max-device-width: 767.8px) {
+  #wide-menu {
+    display: none; } }
+
+@media only screen and (min-device-width: 768px) {
+  #mobile-menu {
+    display: none; } }
+
+.page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin: 40px 20px; }
 
 .growers-g {
   display: grid; }
@@ -63,15 +84,15 @@ h4 {
         .growers-g .card img {
           width: 100%; } }
 
-/* BS VERSION ************/
-.page {
-  margin-top: 1.6em; }
-
-#grower-cards .card {
-  margin: 10px;
-  text-align: center; }
-  #grower-cards .card img {
-    width: 320px;
-    height: 240px; }
+.colophon {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #346732;
+  color: whitesmoke; }
+  .colophon > * {
+    margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
