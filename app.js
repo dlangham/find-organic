@@ -1,6 +1,5 @@
 const express           = require('express'),
       app               = express(),
-      conn              = require('./conn'),
       mongoose          = require('mongoose'),
       flash             = require('connect-flash'),
       passport          = require('passport'),
@@ -11,8 +10,9 @@ const express           = require('express'),
       Comment           = require('./models/comment')
 ;
 
-// local
-const port = 3000
+// set environment: development or production?
+// const environment = 'development'
+const environment = 'production'
 ;
       
 // routes files
@@ -22,7 +22,12 @@ const commentsRoutes    = require('./routes/comments'),
 ;
 
 // CONFIG
-mongoose.connect(`mongodb+srv://${conn.username}:${conn.password}@${conn.cluster}/${conn.database}?retryWrites=true`, { useNewUrlParser: true , useFindAndModify: false, useCreateIndex: true });
+const env   = process.env.NODE_ENV || environment,
+      conn  = require('./conn')[env],
+      url   = `mongodb+srv://${conn.db.user}:${conn.db.pass}@${conn.db.host}/${conn.db.name}?retryWrites=true` || 'www.google.com';
+      
+mongoose.connect(url, { useNewUrlParser: true , useFindAndModify: false, useCreateIndex: true });
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true}));
@@ -66,6 +71,7 @@ app.get('/*', (req,res) => {
     res.send('404 page not found :(');
 });
 
-app.listen(port, () => {
-    console.log('find-organics server is ON');
+app.listen(conn.server.port, conn.server.host, () => {
+    console.log('env: ' + app.get('env'));
+    console.log('find-organics server + db are UP');
 });
