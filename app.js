@@ -11,8 +11,8 @@ const express           = require('express'),
 ;
 
 // set environment: development or production?
-// const environment = 'development'
-const environment = 'production'
+const environment = 'development'
+// const environment = 'production'
 ;
       
 // routes files
