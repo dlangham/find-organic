@@ -1,5 +1,10 @@
 // div,nav,ul,li { outline: 1px solid blue; }
+// a { outline: 1px solid red; }
 
 .hidden {
     display: none !important;
+}
+
+.no-scroll {
+    overflow: hidden;
 }

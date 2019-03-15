@@ -1,6 +1,8 @@
 // @import '../lib/bootstrap-reboot.css';
-@import 'resets';
-@import 'tools';
+@import '_resets';
+@import '_variables';
+@import '_breakpoints';
+@import '_tools';
 @import 'general';
 @import 'header';
 @import 'main';

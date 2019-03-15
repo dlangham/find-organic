@@ -1,12 +1,18 @@
-
-.topstyle {
-    background-color: hsl(107, 30%, 48%);
-    height: 20px;
+.top-a {
+    position: absolute;
+    height: $top-a-height;
+    width: 100%;
+    background-color: $green-mid;
+}
+.top-b {
+    height: $top-b-height;
+    width: 100%;
+    background-color: $green-mid;
 }
 
 .navbar-f {
-    background-color: hsl(107, 30%, 48%);
-
+    background-color: $green-mid;
+    min-height: $nav-height;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,14 +21,12 @@
     position: sticky;
     top: 0;
     
-    // margin-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px 30px;
     
-    //left side (brand)
+    //.brand (left side)
     > :nth-child(1) {
     }
-    //right side (links)
+    //.nav-links (right side)
     > :nth-child(n+2) {
     }
 
@@ -30,30 +34,34 @@
     a:visited,
     a:hover,
     a:active {
-        color: white;
+        color: $links-light;
         font-weight: inherit;
     }
 }
 
 .brand {
-    font-size: 1.6em;
+    font-size: 2em;
 }
 
 #mobile-menu {
-
+    flex-grow: 1;
     .nav-links {
+        padding-left: $hamb-icon-size;
         display: flex;
         flex-flow: column wrap;
         justify-content: flex-start;
-        align-content: flex-end;
-        align-items: flex-end;
-        > li {
+        align-items: stretch;
+        text-align: center;
+        a {
+            display: block;
+            $mobile-item-height: 80px;
+            min-height: $mobile-item-height;
+            line-height: $mobile-item-height;
             font-size: 2em;
         }
     }
 
-     //if large screen, mobile menu hidden
-     @media only screen and (min-device-width: 768px) {
+    @include for-desktop {
         display: none;
     }
 }
@@ -65,13 +73,12 @@
         justify-content: flex-end;
         align-items: center;
         > li {
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin-left: 20px;
         }
     }
 
-    //if small screen, desktop menu hidden
-    @media only screen and (max-device-width: 767.98px) {
+    @include for-mobile {
         display: none;
     }
 }
@@ -83,9 +90,8 @@
 #hamb-icon {
     float: right;
     position: relative;
-    width: 60px;
-    height: 45px;
-    // text-align: right;
+    width: $hamb-icon-size;
+    height: $hamb-icon-size * 3/4;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

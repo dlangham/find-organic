@@ -1,12 +1,15 @@
 ul {
-  list-style-type: none;
-  margin-bottom: 0; }
+  list-style-type: none; }
 
-figure {
-  margin: 0; }
+ul, figure {
+  margin: 0;
+  padding: 0; }
 
 .hidden {
   display: none !important; }
+
+.no-scroll {
+  overflow: hidden; }
 
 h4 {
   font-size: 1.5em; }
@@ -18,20 +21,27 @@ a:active {
   color: #367f24;
   font-weight: bold; }
 
-.topstyle {
-  background-color: #669f56;
-  height: 20px; }
+.top-a {
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  background-color: #669f56; }
+
+.top-b {
+  height: 40px;
+  width: 100%;
+  background-color: #669f56; }
 
 .navbar-f {
   background-color: #669f56;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding-left: 30px;
-  padding-right: 30px; }
+  padding: 20px 30px; }
   .navbar-f a:link,
   .navbar-f a:visited,
   .navbar-f a:hover,
@@ -40,30 +50,35 @@ a:active {
     font-weight: inherit; }
 
 .brand {
-  font-size: 1.6em; }
+  font-size: 2em; }
 
-#mobile-menu .nav-links {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-content: flex-end;
-  align-items: flex-end; }
-  #mobile-menu .nav-links > li {
-    font-size: 2em; }
-
-@media only screen and (min-device-width: 768px) {
-  #mobile-menu {
-    display: none; } }
+#mobile-menu {
+  flex-grow: 1; }
+  #mobile-menu .nav-links {
+    padding-left: 60px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: center; }
+    #mobile-menu .nav-links a {
+      display: block;
+      min-height: 80px;
+      line-height: 80px;
+      font-size: 2em; }
+  @media only screen and (min-width: 768px) {
+    #mobile-menu {
+      display: none; } }
 
 #desktop-menu .nav-links {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
   #desktop-menu .nav-links > li {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-left: 20px; }
 
-@media only screen and (max-device-width: 767.98px) {
+@media only screen and (max-width: 767.98px) {
   #desktop-menu {
     display: none; } }
 
@@ -133,16 +148,17 @@ a:active {
   left: 50%; }
 
 .page {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin: 40px 20px; }
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent; }
 
 .growers-g {
   display: grid; }
   .growers-g .card {
     text-align: center; }
   .growers-g .btn {
-    background-color: #347ff8;
+    background-color: #3580f8;
     color: white;
     padding: 6px 12px;
     border-radius: 5px; }
