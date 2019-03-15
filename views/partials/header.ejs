@@ -12,7 +12,14 @@
     <a class="brand" href="/">Find Organic</a>
     <div id="mobile-menu">
 
-            <ul class="nav-links">
+            <div id="hamb-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+            <ul class="nav-links hidden">
                     <li><a href="/growers">See All Growers</a></li>
                 <% if(!currentUser) { %>
                     <li><a href="/login">Login</a></li>
@@ -24,7 +31,7 @@
             </ul>
     </div>
 
-    <div id="wide-menu">
+    <div id="desktop-menu">
 
         <ul class="nav-links">
             <li><a href="/growers">See All Growers</a></li>

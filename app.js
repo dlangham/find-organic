@@ -10,7 +10,7 @@ const express           = require('express'),
       Comment           = require('./models/comment')
 ;
 
-// set environment: development or production?
+// toggle environment
 const environment = 'development'
 // const environment = 'production'
 ;

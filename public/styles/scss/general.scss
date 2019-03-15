@@ -1,6 +1,4 @@
 
-// div,nav,ul,li { outline: 1px solid blue; }
-
 body {
     // font-family: "Segoe UI", Arial, sans-serif;
 }
@@ -12,11 +10,6 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    // color: hsl(118, 35%, 30%);
     color: hsl(108, 56%, 32%);
     font-weight: bold;
-    // text-decoration: none;
-}
-a:hover {
-    // background-color: green;
 }
