@@ -6,6 +6,10 @@
     border-bottom: 40px solid transparent;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
+    a {
+        font-weight: bold;
+
+    }
 }
 
 .growers-g {
@@ -19,7 +23,7 @@
         padding: 6px 12px;
         border-radius: 5px;
     }
-    ////////////small screen ("mobile")
+
     @include for-mobile {
         grid-template-columns: 1fr;
         grid-gap: 20px;
@@ -32,7 +36,6 @@
         }
     }
     
-    ///////////large screen ("desktop")
     @include for-desktop {
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -50,4 +53,5 @@
             }
         }
     }
+    
 }

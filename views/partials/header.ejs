@@ -7,10 +7,12 @@
     <title>Find Organic</title>
     <link href="/styles/lib/bootstrap-reboot.css" rel="stylesheet">
     <link href="/styles/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700|Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
 </head>
 <body>
-    <div class="top-a"></div>
-    <div class="top-b"></div>
+<div class="top-a"></div>
+<div class="top-b"></div>
 <nav class="navbar-f">
     
     <a class="brand" href="/">Find Organic</a>
@@ -55,14 +57,17 @@
 </nav>
 <div class="top-b"></div>
 
-<div class="container">
+<div class="off-menu">
+
+<!-- alert flash -->
+<div class="flash">
     <% if(messageSuccess && messageSuccess.length > 0) { %>
         <div class="alert alert-success" role="alert">
             <%= messageSuccess %>
         </div> 
     <% } %>
     <% if(messageError && messageError.length > 0) { %>
-        <div class="alert alert-danger" role="alert">
+        <div class="flash-danger" role="alert">
             <%= messageError %>
         </div>
     <% } %>

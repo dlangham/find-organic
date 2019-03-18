@@ -20,8 +20,14 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    
-    padding: 20px 30px;
+    @include for-desktop {
+        padding: 0 40px;
+        
+    }
+    @include for-mobile {
+        padding: 0 20px;
+
+    }
     
     //.brand (left side)
     > :nth-child(1) {
@@ -35,16 +41,22 @@
     a:hover,
     a:active {
         color: $links-light;
-        font-weight: inherit;
     }
 }
 
 .brand {
-    font-size: 2em;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: "Quattrocento Sans";
+    // font-weight: 700;
+    font-size: 3em;
 }
-
+.nav-links a {
+    font-weight: inherit;
+}
 #mobile-menu {
     flex-grow: 1;
+    padding: 30px 20px;
+
     .nav-links {
         padding-left: $hamb-icon-size;
         display: flex;
@@ -91,7 +103,7 @@
     float: right;
     position: relative;
     width: $hamb-icon-size;
-    height: $hamb-icon-size * 3/4;
+    height: $hamb-icon-height;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

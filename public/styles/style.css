@@ -1,7 +1,8 @@
 ul {
   list-style-type: none; }
 
-ul, figure {
+ul, figure, input,
+h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0; }
 
@@ -18,42 +19,54 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #367f24;
-  font-weight: bold; }
+  color: #367f24; }
+
+.flash-danger {
+  background-color: tomato; }
 
 .top-a {
   position: absolute;
-  height: 160px;
+  height: 50px;
   width: 100%;
   background-color: #669f56; }
 
 .top-b {
-  height: 40px;
+  height: 25px;
   width: 100%;
   background-color: #669f56; }
 
 .navbar-f {
   background-color: #669f56;
-  min-height: 80px;
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  padding: 20px 30px; }
+  top: 0; }
+  @media only screen and (min-width: 768px) {
+    .navbar-f {
+      padding: 0 40px; } }
+  @media only screen and (max-width: 767.98px) {
+    .navbar-f {
+      padding: 0 20px; } }
   .navbar-f a:link,
   .navbar-f a:visited,
   .navbar-f a:hover,
   .navbar-f a:active {
-    color: white;
-    font-weight: inherit; }
+    color: white; }
 
 .brand {
-  font-size: 2em; }
+  font-family: 'Hind Siliguri', sans-serif;
+  font-family: "Quattrocento Sans";
+  font-size: 3em; }
+
+.nav-links a {
+  font-weight: inherit; }
 
 #mobile-menu {
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding: 30px 20px; }
   #mobile-menu .nav-links {
     padding-left: 60px;
     display: flex;
@@ -86,7 +99,7 @@ a:active {
   float: right;
   position: relative;
   width: 60px;
-  height: 45px;
+  height: 40px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -152,6 +165,8 @@ a:active {
   border-bottom: 40px solid transparent;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent; }
+  .page a {
+    font-weight: bold; }
 
 .growers-g {
   display: grid; }
