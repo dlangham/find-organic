@@ -18,7 +18,54 @@ a:active {
 %container {
     width: 100%;
 }
+%button {
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $btn-color;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: $btn-color;
+    }
+    border: none;
+    border-radius: .25rem;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    // line-height: 1.5;
+    // transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-cta {
+    @extend %button;
+    background-color: $btn-cta-bg;
+    font-size: 1.2em;
+    padding: .5rem .75rem;
+    width: 200px;
+    margin: 20px auto 10px auto;
+    @include for-mobile {
+    }
+    @include for-desktop {
 
+    }
+    // border-color: $btn-edit-bg;
+}
+.btn-edit {
+    @extend %button;
+    background-color: $btn-edit-bg;
+    // border-color: $btn-edit-bg;
+}
+.btn-delete {
+    @extend %button;
+    background-color: $btn-delete-bg;
+    // border-color: $btn-delete-bg;
+}
 .flash {
     // @extend %container;
 }

@@ -21,6 +21,37 @@ a:hover,
 a:active {
   color: #367f24; }
 
+.btn-cta, .btn-edit, .btn-delete {
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: .25rem;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer; }
+  .btn-cta:link, .btn-edit:link, .btn-delete:link, .btn-cta:visited, .btn-edit:visited, .btn-delete:visited, .btn-cta:hover, .btn-edit:hover, .btn-delete:hover, .btn-cta:active, .btn-edit:active, .btn-delete:active {
+    color: #fff; }
+
+.btn-cta {
+  background-color: #3580f8;
+  font-size: 1.2em;
+  padding: .5rem .75rem;
+  width: 200px;
+  margin: 20px auto 10px auto; }
+
+.btn-edit {
+  background-color: #dec62b; }
+
+.btn-delete {
+  background-color: #c16349; }
+
 .flash-danger {
   background-color: tomato; }
 
@@ -54,21 +85,27 @@ a:active {
   .navbar-f a:visited,
   .navbar-f a:hover,
   .navbar-f a:active {
-    color: white; }
+    color: #fff; }
 
 .brand {
   font-family: 'Hind Siliguri', sans-serif;
-  font-family: "Quattrocento Sans";
-  font-size: 3em; }
+  font-family: "Quattrocento Sans"; }
+  @media only screen and (max-width: 767.98px) {
+    .brand {
+      font-size: 2.5em; } }
+  @media only screen and (min-width: 768px) {
+    .brand {
+      font-size: 3em; } }
 
 .nav-links a {
   font-weight: inherit; }
 
 #mobile-menu {
   flex-grow: 1;
-  padding: 30px 20px; }
+  padding: 34px 20px;
+  min-height: 100px; }
   #mobile-menu .nav-links {
-    padding-left: 60px;
+    padding-left: 48px;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -98,8 +135,8 @@ a:active {
 #hamb-icon {
   float: right;
   position: relative;
-  width: 60px;
-  height: 40px;
+  width: 48px;
+  height: 32px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -113,10 +150,10 @@ a:active {
 #hamb-icon span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 6.4px;
   width: 100%;
   background: #fff;
-  border-radius: 9px;
+  border-radius: 6.4px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -133,10 +170,10 @@ a:active {
 
 #hamb-icon span:nth-child(2),
 #hamb-icon span:nth-child(3) {
-  top: 18px; }
+  top: 12.8px; }
 
 #hamb-icon span:nth-child(4) {
-  top: 36px; }
+  top: 25.6px; }
 
 #hamb-icon.open span:nth-child(1) {
   top: 18px;
@@ -168,6 +205,35 @@ a:active {
   .page a {
     font-weight: bold; }
 
+.hero {
+  height: 800px;
+  background: center no-repeat white;
+  background-size: cover;
+  background-image: url("../images/30093161307_3301b46951_o_2000x1333.jpg"); }
+  @media only screen and (max-width: 767.98px) {
+    .hero {
+      padding: 30px 0; } }
+  @media only screen and (min-width: 768px) {
+    .hero {
+      padding: 5vw 2rem; } }
+
+.greeting {
+  background-color: rgba(255, 255, 255, 0.698);
+  text-align: center;
+  padding: 30px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 767.98px) {
+    .greeting {
+      width: 100%;
+      border-radius: 0; } }
+  @media only screen and (min-width: 768px) {
+    .greeting {
+      width: 80%;
+      border-radius: 10px; } }
+  .greeting h2 {
+    font-weight: 500;
+    margin: 10px; }
+
 .growers-g {
   display: grid; }
   .growers-g .card {
@@ -192,6 +258,9 @@ a:active {
           overflow: hidden; }
         .growers-g .card img {
           width: 100%; } }
+
+.show-grower img {
+  max-width: 100%; }
 
 .colophon {
   height: 260px;

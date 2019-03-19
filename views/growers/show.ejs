@@ -1,23 +1,24 @@
 <% include ../partials/header %>
+<div class="page">
 
-        
-<div class="thumbnail">
+<div class="show-grower">
+
+<main>
     <img class="img-fluid" src="<%= '../images/' + grower.image %>">
     
-    <div class="caption-full">
-        <h4><a><%= grower.name %></a></h4>
+        <h1><a><%= grower.name %></a></h1>
         <p><%= grower.description %></p>
         <p>
             <em>Submitted By: <%= grower.author.username %></em>
         </p>
         <% if (currentUser && grower.author.id.equals (currentUser._id)) {%>
-            <a class="btn btn-xs btn-warning" href="/growers/<%= grower._id %>/edit">Edit Grower</a>
-            <form class="delete-form" action="/growers/<%= grower._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-xs btn-danger">Delete Grower</button>
-            </form>
+            <a class="btn-edit" href="/growers/<%= grower._id %>/edit">Edit Grower</a>
+            <button class="btn-delete" href="/growers/<%= grower._id %>/edit">Delete Grower</button>
+            <!-- <form class="delete-form" action="/growers/<%= grower._id %>?_method=DELETE" method="POST">
+                <button class="btn-delete">Delete Grower</button>
+            </form> -->
         <% } %>
-    </div>
-</div>
+</main>
 
 <div class="well">
     <div class="text-right">
@@ -46,5 +47,9 @@
     <a href="/growers">Go Back To All Growers</a>
 </div>
 
+</div>
+<!-- /.show-grower -->
 
+</div>
+<!-- /.page -->
 <% include ../partials/footer %>

@@ -12,6 +12,44 @@
     }
 }
 
+.hero {
+    height: 800px;
+    background: center no-repeat white;
+    background-size: cover;
+    // background-size: 160vw;
+    background-image: url('../images/30093161307_3301b46951_o_2000x1333.jpg');
+    // background-image: url('//farm4.staticflickr.com/3248/5707348570_d42caf87b9_b.jpg');
+    // padding: 4rem 2rem;
+    @include for-mobile {
+        padding: 30px 0;
+        
+    }
+    @include for-desktop {
+        padding: 5vw 2rem;
+
+    }
+}
+.greeting {
+    background-color: rgba(255, 255, 255, 0.698);
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    @include for-mobile {
+        width: 100%;
+        border-radius: 0;
+    }
+    @include for-desktop {
+        width: 80%;
+        border-radius: 10px;   
+    }
+
+    h2 {
+        font-weight: 500;
+        margin: 10px;
+    }
+}
+
+
 .growers-g {
     display: grid;
     .card {
@@ -29,10 +67,6 @@
         grid-gap: 20px;
         img {
             max-width: 92%;
-            // border-top-left-radius: 4%;
-            // border-top-right-radius: 4%;
-            // border-bottom-left-radius: 10%;
-            // border-bottom-right-radius: 10%;
         }
     }
     
@@ -54,4 +88,12 @@
         }
     }
     
+}
+
+.show-grower {
+
+    img {
+        max-width: 100%;
+    }
+
 }

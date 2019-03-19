@@ -48,14 +48,21 @@
     font-family: 'Hind Siliguri', sans-serif;
     font-family: "Quattrocento Sans";
     // font-weight: 700;
-    font-size: 3em;
+    @include for-mobile {
+        font-size: 2.5em;
+    }
+    @include for-desktop {
+        font-size: 3em;
+    }
 }
 .nav-links a {
     font-weight: inherit;
 }
 #mobile-menu {
     flex-grow: 1;
-    padding: 30px 20px;
+    // padding: 30px 20px;
+    padding: (($nav-height - $hamb-icon-height) / 2) 20px;
+    min-height: $nav-height;
 
     .nav-links {
         padding-left: $hamb-icon-size;
@@ -118,10 +125,10 @@
 #hamb-icon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: $hamb-icon-line-size;
     width: 100%;
     background: #fff;
-    border-radius: 9px;
+    border-radius: $hamb-icon-line-size;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -141,11 +148,11 @@
   
 #hamb-icon span:nth-child(2),
 #hamb-icon span:nth-child(3) {
-    top: 18px;
+    top: $hamb-icon-line-spacer;
   }
   
 #hamb-icon span:nth-child(4) {
-    top: 36px;
+    top: $hamb-icon-line-spacer * 2;
 }
   
 #hamb-icon.open span:nth-child(1) {
