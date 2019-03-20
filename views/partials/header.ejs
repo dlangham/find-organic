@@ -8,7 +8,10 @@
     <link href="/styles/lib/bootstrap-reboot.css" rel="stylesheet">
     <link href="/styles/style.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700|Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Magra:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
 </head>
 <body>
 <div class="top-a"></div>
@@ -28,7 +31,7 @@
         
             <ul class="nav-links hidden">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/growers">See All Growers</a></li>
+                    <li><a href="/growers">Search</a></li>
                 <% if(!currentUser) { %>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Sign Up</a></li>
@@ -36,13 +39,14 @@
                     <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
                     <li><a href="/logout">Logout</a></li>
                 <% } %>
+                    <li><a href="/about">About</a></li>
             </ul>
     </div>
 
     <div id="desktop-menu">
 
         <ul class="nav-links">
-            <li><a href="/growers">See All Growers</a></li>
+            <li><a href="/growers">Search</a></li>
             <% if(!currentUser) { %>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Sign Up</a></li>
@@ -50,6 +54,7 @@
                 <li><a href="#0">Signed in as: <strong><%= currentUser.username %></strong></a></li>
                 <li><a href="/logout">Logout</a></li>
             <% } %>
+                <li><a href="/about">About</a></li>
         </ul>
                 
     </div>

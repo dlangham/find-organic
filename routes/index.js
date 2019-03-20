@@ -8,6 +8,10 @@ const express   = require('express'),
 router.get('/', (req, res) => {
     res.render('landing.ejs');
 });
+//about
+router.get('/about', (req, res) => {
+    res.render('about');
+});
 
 // ================================
 // AUTH ROUTES

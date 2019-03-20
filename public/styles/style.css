@@ -12,16 +12,40 @@ h1, h2, h3, h4, h5 {
 .no-scroll {
   overflow: hidden; }
 
-h4 {
-  font-size: 1.5em; }
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #1a1a1a; }
 
-a:link,
+p {
+  margin: 1rem 0; }
+
+h1 {
+  font-family: "Magra"; }
+
+h2 {
+  font-family: "Open Sans"; }
+
+a, a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #367f24; }
+  color: #367f24;
+  font-family: "Open Sans";
+  text-decoration: none; }
 
-.btn-cta, .btn-edit, .btn-delete {
+@media only screen and (max-width: 767.98px) {
+  h1 {
+    font-size: 2.1rem; }
+  h2 {
+    font-size: 1.2rem; } }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.8rem; }
+  h2 {
+    font-size: 1.4rem; } }
+
+.btn-general, .btn-cta, .btn-edit, .btn-delete {
   display: inline-block;
   padding: .375rem .75rem;
   font-size: 1rem;
@@ -36,15 +60,15 @@ a:active {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer; }
-  .btn-cta:link, .btn-edit:link, .btn-delete:link, .btn-cta:visited, .btn-edit:visited, .btn-delete:visited, .btn-cta:hover, .btn-edit:hover, .btn-delete:hover, .btn-cta:active, .btn-edit:active, .btn-delete:active {
+  .btn-general:link, .btn-cta:link, .btn-edit:link, .btn-delete:link, .btn-general:visited, .btn-cta:visited, .btn-edit:visited, .btn-delete:visited, .btn-general:hover, .btn-cta:hover, .btn-edit:hover, .btn-delete:hover, .btn-general:active, .btn-cta:active, .btn-edit:active, .btn-delete:active {
     color: #fff; }
 
-.btn-cta {
+.btn-general {
   background-color: #3580f8;
-  font-size: 1.2em;
-  padding: .5rem .75rem;
-  width: 200px;
-  margin: 20px auto 10px auto; }
+  color: #fff !important; }
+
+.btn-cta {
+  background-color: #3580f8; }
 
 .btn-edit {
   background-color: #dec62b; }
@@ -57,18 +81,18 @@ a:active {
 
 .top-a {
   position: absolute;
-  height: 50px;
+  height: 40px;
   width: 100%;
   background-color: #669f56; }
 
 .top-b {
-  height: 25px;
+  height: 20px;
   width: 100%;
   background-color: #669f56; }
 
 .navbar-f {
   background-color: #669f56;
-  min-height: 100px;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,23 +111,22 @@ a:active {
   .navbar-f a:active {
     color: #fff; }
 
-.brand {
-  font-family: 'Hind Siliguri', sans-serif;
+a.brand {
   font-family: "Quattrocento Sans"; }
   @media only screen and (max-width: 767.98px) {
-    .brand {
-      font-size: 2.5em; } }
+    a.brand {
+      font-size: 2.5rem; } }
   @media only screen and (min-width: 768px) {
-    .brand {
-      font-size: 3em; } }
+    a.brand {
+      font-size: 3rem; } }
 
 .nav-links a {
   font-weight: inherit; }
 
 #mobile-menu {
   flex-grow: 1;
-  padding: 34px 20px;
-  min-height: 100px; }
+  padding: 24px 20px;
+  min-height: 80px; }
   #mobile-menu .nav-links {
     padding-left: 48px;
     display: flex;
@@ -115,7 +138,7 @@ a:active {
       display: block;
       min-height: 80px;
       line-height: 80px;
-      font-size: 2em; }
+      font-size: 2rem; }
   @media only screen and (min-width: 768px) {
     #mobile-menu {
       display: none; } }
@@ -125,8 +148,8 @@ a:active {
   justify-content: flex-end;
   align-items: center; }
   #desktop-menu .nav-links > li {
-    font-size: 1.4em;
-    margin-left: 20px; }
+    font-size: 1.25rem;
+    margin-left: 30px; }
 
 @media only screen and (max-width: 767.98px) {
   #desktop-menu {
@@ -198,66 +221,175 @@ a:active {
   left: 50%; }
 
 .page {
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent; }
+  text-align: center; }
   .page a {
     font-weight: bold; }
+  @media only screen and (max-width: 767.98px) {
+    .page {
+      margin: 20px 0; } }
+  @media only screen and (min-width: 768px) {
+    .page {
+      margin: 40px 20px; } }
+
+.page.about {
+  text-align: left;
+  margin: 40px 20px; }
 
 .hero {
-  height: 800px;
   background: center no-repeat white;
   background-size: cover;
   background-image: url("../images/30093161307_3301b46951_o_2000x1333.jpg"); }
   @media only screen and (max-width: 767.98px) {
     .hero {
-      padding: 30px 0; } }
+      padding: 80px 0;
+      height: 75vh; } }
   @media only screen and (min-width: 768px) {
     .hero {
-      padding: 5vw 2rem; } }
+      padding: 5vw 2rem;
+      height: 800px;
+      height: 100vh; } }
 
 .greeting {
   background-color: rgba(255, 255, 255, 0.698);
   text-align: center;
-  padding: 30px;
   margin: 0 auto; }
+  .greeting p {
+    font-family: "Quattrocento Sans";
+    font-weight: 400;
+    color: black; }
+    @media only screen and (max-width: 767.98px) {
+      .greeting p {
+        font-size: 1.25rem; } }
+    @media only screen and (min-width: 768px) {
+      .greeting p {
+        font-size: 1.4rem; } }
+  .greeting .btn-cta {
+    padding: .5rem .75rem; }
+    @media only screen and (max-width: 767.98px) {
+      .greeting .btn-cta {
+        width: 200px;
+        font-size: 1.18rem;
+        margin: 10px auto 10px auto; }
+        .greeting .btn-cta img {
+          height: 40px;
+          margin-left: 10px;
+          margin-right: -5px; } }
+    @media only screen and (min-width: 768px) {
+      .greeting .btn-cta {
+        width: 220px;
+        font-size: 1.3rem;
+        margin: 20px auto 10px auto; }
+        .greeting .btn-cta img {
+          height: 45px;
+          margin-left: 10px;
+          margin-right: -5px; } }
   @media only screen and (max-width: 767.98px) {
     .greeting {
       width: 100%;
+      padding: 30px 30px;
       border-radius: 0; } }
   @media only screen and (min-width: 768px) {
     .greeting {
       width: 80%;
+      max-width: 1000px;
+      padding: 30px 60px;
       border-radius: 10px; } }
-  .greeting h2 {
-    font-weight: 500;
-    margin: 10px; }
 
 .growers-g {
   display: grid; }
-  .growers-g .card {
-    text-align: center; }
-  .growers-g .btn {
-    background-color: #3580f8;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 5px; }
   @media only screen and (max-width: 767.98px) {
     .growers-g {
       grid-template-columns: 1fr;
-      grid-gap: 20px; }
-      .growers-g img {
-        max-width: 92%; } }
+      grid-gap: 50px; }
+      .growers-g .card-hero {
+        min-width: 100%;
+        height: 160px;
+        object-fit: cover;
+        object-position: 50% 50%; } }
   @media only screen and (min-width: 768px) {
     .growers-g {
-      grid-template-columns: 1fr 1fr 1fr; }
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.5vw; } }
+  @media only screen and (min-width: 1200px) {
+    .growers-g {
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 1.5vw; } }
+  .growers-g .card {
+    text-align: center; }
+    .growers-g .card a {
+      color: #1a1a1a; }
+    .growers-g .card p {
+      margin: 0; }
+    @media only screen and (max-width: 767.98px) {
       .growers-g .card {
-        max-width: 30vw; }
-        .growers-g .card figure {
-          overflow: hidden; }
-        .growers-g .card img {
-          width: 100%; } }
+        border-bottom: 8px solid #d9d9d9; } }
+    @media only screen and (min-width: 768px) {
+      .growers-g .card {
+        border: 1px solid #d9d9d9;
+        border-radius: 5px; } }
+    .growers-g .card .details-g {
+      display: grid; }
+      @media only screen and (max-width: 767.98px) {
+        .growers-g .card .details-g {
+          width: 95%;
+          max-width: 600px;
+          margin: 10px auto;
+          grid-template-columns: repeat(7, 1fr) 4fr; }
+          .growers-g .card .details-g > * {
+            align-self: center; }
+          .growers-g .card .details-g *:nth-child(1) {
+            order: 1;
+            grid-column: 1/8;
+            justify-self: start;
+            text-align: left; }
+          .growers-g .card .details-g *:nth-child(2) {
+            order: 3;
+            justify-self: start; }
+          .growers-g .card .details-g *:nth-child(3) {
+            order: 2;
+            justify-self: end; }
+          .growers-g .card .details-g *:nth-child(4) {
+            order: 4;
+            grid-column: 5/-1;
+            justify-self: end; }
+          .growers-g .card .details-g p {
+            font-size: 0.9rem; }
+          .growers-g .card .details-g h2 {
+            margin: 0; }
+          .growers-g .card .details-g img {
+            width: 10vw;
+            min-width: 100px;
+            max-width: 150px; }
+          .growers-g .card .details-g .btn-general {
+            font-size: 0.9rem;
+            width: 135px; } }
+      @media only screen and (min-width: 768px) {
+        .growers-g .card .details-g {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 10px; }
+          .growers-g .card .details-g h2 {
+            margin: 10px 0; }
+          .growers-g .card .details-g *:nth-child(1) {
+            order: 1; }
+          .growers-g .card .details-g *:nth-child(2) {
+            order: 2; }
+          .growers-g .card .details-g *:nth-child(3) {
+            order: 3; }
+          .growers-g .card .details-g *:nth-child(4) {
+            order: 4; }
+          .growers-g .card .details-g img {
+            display: block;
+            margin: 0 auto;
+            width: 12vw;
+            min-width: 100px;
+            max-width: 140px; } }
+  .growers-g .card-hero {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; }
+    @media only screen and (max-width: 767.98px) {
+      .growers-g .card-hero {
+        height: 160px; } }
 
 .show-grower img {
   max-width: 100%; }

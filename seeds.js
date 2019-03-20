@@ -42,6 +42,42 @@ const seedData = [
             id: null,
             username: null
         }
+    },
+    {
+        name: 'Broccoli Heaven',
+        image: '8425082435_2c1e938284_o-640x480.jpg',
+        description: "So much broccoli, so little time. Yum yum!"
+        ,author: {
+            id: null,
+            username: null
+        }
+    },
+        {
+        name: 'It\'s Raining Greens',
+        image: '2872396423_a792a98008_o-640x480.jpg',
+        description: "Plenty of greens for everyone. Come get some!"
+        ,author: {
+            id: null,
+            username: null
+        }
+    },
+    {
+        name: 'Organically Delicious',
+        image: '8538378880_5cdf0f65eb_o-640x480.jpg',
+        description: 'More magical than you\'d expect.'
+        ,author: {
+            id: null,
+            username: null
+        }
+    },
+    {
+        name: 'Naturally Rooted Organics',
+        image: '2910451015_b65f02cc3d_o-640x480.jpg',
+        description: 'Roots and tubers are our specialty.'
+        ,author: {
+            id: null,
+            username: null
+        }
     }
 ];
 

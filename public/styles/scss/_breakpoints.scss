@@ -1,5 +1,6 @@
 $mobile-and-down: 767.98px;
 $tablet-desktop-and-up: 768px;
+$wide-desktop-and-up: 1200px;
 
 @mixin for-mobile {
     @media only screen
@@ -8,4 +9,8 @@ $tablet-desktop-and-up: 768px;
 @mixin for-desktop {
     @media only screen
     and (min-width: $tablet-desktop-and-up) { @content; }
+}
+@mixin for-wide-desktop {
+    @media only screen
+    and (min-width: $wide-desktop-and-up) { @content; }
 }

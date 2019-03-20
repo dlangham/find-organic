@@ -4,10 +4,10 @@
 
 <header>
     <div>
-        <h1>List of Growers</h1>
-        <p>View our selected growers from all over the world</p>
+        <h1>Your Search</h1>
+        <p>Choose filters for best results</p>
         <p>
-            <a href="/growers/new">Add A Grower</a>
+            <a href="/growers/new">Add a Person/Organization</a>
         </p>
     </div>
 </header>
@@ -16,19 +16,28 @@
     <div class="growers-g">
         <% growers.forEach((grower) => { %>
             <div class="card">
-
-                <figure>
-                    <img src="<%= './images/' + grower.image %>">
-                </figure>
-
-                <h4>
-                    <%= grower.name %>
-                </h4>
-
-                <p>
-                    <a href="/growers/<%= grower._id %>" class="btn btn-primary">More Info</a>
-                </p>
                 
+                <a href="/growers/<%= grower._id %>">
+                    <img class="card-hero" src="<%= './images/' + grower.image %>">
+                </a>
+                
+                <div class="details-g">
+
+                    <h2><%= grower.name %>
+                    </h2>
+
+                    <img src="./images/five-stars-429x100.png" alt="rating-stars">
+                    
+                    <p>
+                        <%= (Math.random() * 10).toFixed(1) %> mi away
+                    </p>
+                    
+                    <a href="#0" class="btn-general">
+                        Visit Website
+                    </a>
+                    
+                </div>
+                <!-- /.details-g -->
             </div>
             <!-- /.card -->
         <% }); %>

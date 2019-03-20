@@ -1,10 +1,11 @@
 <% include ../partials/header %>
 <div class="page">
-
 <div class="show-grower">
 
+<a href="/growers">Back to Search</a>
+
 <main>
-    <img class="img-fluid" src="<%= '../images/' + grower.image %>">
+    <img src="<%= '../images/' + grower.image %>">
     
         <h1><a><%= grower.name %></a></h1>
         <p><%= grower.description %></p>

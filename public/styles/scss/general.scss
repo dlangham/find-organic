@@ -1,18 +1,64 @@
 
 body {
-    // font-family: "Segoe UI", Arial, sans-serif;
-    // font-family: 'Verdana', sans-serif;
+    font-family: $ff-general, sans-serif;
+    color: $black-text;
 }
-
-h4 {
-    font-size: 1.5em;
+p {
+    // font-family: $ff-general;
+    margin: 1rem 0;
 }
+h1 {
+    font-family: $ff-heading;
+}
+h2 {
+    font-family: $ff-general;
+}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
 
-a:link,
+a, a:link,
 a:visited,
 a:hover,
 a:active {
     color: $links-dark;
+    font-family: $ff-general;
+    text-decoration: none;
+}
+@include for-mobile {
+    p {}
+    a {}
+    h1 {
+        font-size: 2.1rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+}
+@include for-desktop {
+    p {}
+    a {}
+    h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+        // font-size: 2vw;
+    }
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+}
+
+
+img {
+    // width: 100%;
 }
 
 %container {
@@ -42,18 +88,14 @@ a:active {
     // line-height: 1.5;
     // transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.btn-general {
+    @extend %button;
+    background-color: $btn-general-bg;
+    color: $btn-color !important;
+}
 .btn-cta {
     @extend %button;
     background-color: $btn-cta-bg;
-    font-size: 1.2em;
-    padding: .5rem .75rem;
-    width: 200px;
-    margin: 20px auto 10px auto;
-    @include for-mobile {
-    }
-    @include for-desktop {
-
-    }
     // border-color: $btn-edit-bg;
 }
 .btn-edit {

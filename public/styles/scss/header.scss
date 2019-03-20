@@ -44,15 +44,14 @@
     }
 }
 
-.brand {
-    font-family: 'Hind Siliguri', sans-serif;
-    font-family: "Quattrocento Sans";
+a.brand {
+    font-family: $ff-brand-subheading;
     // font-weight: 700;
     @include for-mobile {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
     @include for-desktop {
-        font-size: 3em;
+        font-size: 3rem;
     }
 }
 .nav-links a {
@@ -76,7 +75,7 @@
             $mobile-item-height: 80px;
             min-height: $mobile-item-height;
             line-height: $mobile-item-height;
-            font-size: 2em;
+            font-size: 2rem;
         }
     }
 
@@ -92,8 +91,8 @@
         justify-content: flex-end;
         align-items: center;
         > li {
-            font-size: 1.4em;
-            margin-left: 20px;
+            font-size: 1.25rem;
+            margin-left: 30px;
         }
     }
 
