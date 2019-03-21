@@ -10,7 +10,7 @@ const seedData = [
     {
         name: 'Overland Organics',
         image: 'killer-tomato-1497481-640x480.jpg',
-        description: "Growing 200 varieties of vegetables and fruits."
+        description: "Growing 200 varieties of vegetables and fruits. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         ,author: {
             id: null,
             username: null
@@ -19,7 +19,7 @@ const seedData = [
         {
         name: 'Charismatic Cornucopia',
         image: 'organic-veggie-1538668-640x480.jpg',
-        description: "Nature provides all goodness in small packages."
+        description: "Nature provides all goodness in small packages. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         ,author: {
             id: null,
             username: null
@@ -28,7 +28,7 @@ const seedData = [
     {
         name: 'Sun-Filled Foods',
         image: 'tomatoes-1327673-640x480.jpg',
-        description: 'The sun infuses soulful nutrients into all good food.'
+        description: 'The sun infuses soulful nutrients into all good food. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         ,author: {
             id: null,
             username: null
@@ -37,7 +37,7 @@ const seedData = [
     {
         name: 'Food Loves You',
         image: 'vegetables-1528499-640x480.jpg',
-        description: 'Certified organic farm offering variety of veggies.'
+        description: 'Certified organic farm offering variety of veggies. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         ,author: {
             id: null,
             username: null
@@ -46,7 +46,7 @@ const seedData = [
     {
         name: 'Broccoli Heaven',
         image: '8425082435_2c1e938284_o-640x480.jpg',
-        description: "So much broccoli, so little time. Yum yum!"
+        description: "So much broccoli, so little time. Yum yum! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         ,author: {
             id: null,
             username: null
@@ -64,7 +64,7 @@ const seedData = [
     {
         name: 'Organically Delicious',
         image: '8538378880_5cdf0f65eb_o-640x480.jpg',
-        description: 'More magical than you\'d expect.'
+        description: 'More magical than you\'d expect. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         ,author: {
             id: null,
             username: null
@@ -73,7 +73,7 @@ const seedData = [
     {
         name: 'Naturally Rooted Organics',
         image: '2910451015_b65f02cc3d_o-640x480.jpg',
-        description: 'Roots and tubers are our specialty.'
+        description: 'Roots and tubers are our specialty. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         ,author: {
             id: null,
             username: null

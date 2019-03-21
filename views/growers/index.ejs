@@ -1,15 +1,13 @@
 <% include ../partials/header %>
 
-<div class="page">
+<div class="page index">
 
 <header>
-    <div>
-        <h1>Your Search</h1>
-        <p>Choose filters for best results</p>
-        <p>
-            <a href="/growers/new">Add a Person/Organization</a>
-        </p>
-    </div>
+    <h1>Your Search</h1>
+    <p class="gray-out">Choose filters for best results</p>
+    <p>
+        <a href="/growers/new">Add a Person/Organization</a>
+    </p>
 </header>
 
 <main>
@@ -21,7 +19,7 @@
                     <img class="card-hero" src="<%= './images/' + grower.image %>">
                 </a>
                 
-                <div class="details-g">
+                <div class="card-details-g">
 
                     <h2><%= grower.name %>
                     </h2>
@@ -37,7 +35,7 @@
                     </a>
                     
                 </div>
-                <!-- /.details-g -->
+                <!-- /.card-details-g -->
             </div>
             <!-- /.card -->
         <% }); %>

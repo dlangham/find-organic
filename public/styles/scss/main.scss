@@ -10,10 +10,6 @@
         margin: 40px 20px;
     }
 }
-.page.about {
-    text-align: left;
-    margin: 40px 20px;
-}
 
 .hero {
     background: center no-repeat white;
@@ -76,10 +72,13 @@
     }
     @include for-desktop {
         width: 80%;
-        max-width: 1000px;
-        padding: 30px 60px;
+        max-width: $content-width;
+        padding: 30px 40px;
         border-radius: 10px;   
     }
+}
+
+.page.index {
 }
 
 .growers-g {
@@ -113,83 +112,85 @@
         p { margin: 0; }
         
         @include for-mobile { //.growers-g .card
-            border-bottom: 8px solid hsl(0, 0%, 85%);
+            border-bottom: 1px solid $gray-light;
         }
 
         @include for-desktop { //.growers-g .card
-            border: 1px solid hsl(0, 0%, 85%);
+            border: 1px solid $gray-light;
             border-radius: 5px;
         }
-
-        .details-g {
-            display: grid;
-
-            @include for-mobile { //.growers-g .card .details-g
-                width: 95%;
-                max-width: 600px;
-                margin: 10px auto;
-
-                grid-template-columns: repeat(7, 1fr) 4fr;
-                &>* {align-self:center;} //vertically center each item
-                *:nth-child(1) { //name
-                    order: 1; grid-column: 1/8; justify-self: start; text-align: left; } 
-                *:nth-child(2) { //rating stars
-                    order: 3; justify-self: start; } 
-                *:nth-child(3) { //mi away
-                    order: 2; justify-self: end; } 
-                *:nth-child(4) { //btn visit website
-                    order: 4; grid-column: 5/-1; justify-self: end;}
-                p {
-                    font-size: 0.9rem;
-                }
-                h2 {
-                    margin: 0;
-                }
-                img { //rating stars
-                    width: 10vw;
-                    min-width: 100px;
-                    max-width: 150px;
-                }
-                .btn-general {
-                    font-size: 0.9rem;
-                    width: 135px;
-                }
-            }
-            @include for-desktop { //.growers-g .card .details-g
-                grid-template-columns: repeat(1, 1fr);
-                grid-gap: 10px; 
-                h2 { margin: 10px 0; }
-                *:nth-child(1) {order:1}
-                *:nth-child(2) {order:2}
-                *:nth-child(3) {order:3}
-                *:nth-child(4) {order:4}
-                
-                img { //rating stars
-                    display: block;
-                    margin: 0 auto;
-                    width: 12vw;
-                    min-width: 100px;
-                    max-width: 140px;
-                }
-                .btn-general {
-
-                }
-            }
-            @include for-wide-desktop {}
-        }
-        // end .details-g
     }
     // end .card
 
-    .card-hero {
+    .card-details-g {
+        display: grid;
+
+        @include for-mobile { //.growers-g .card-details-g
+            width: 95%;
+            max-width: 600px;
+            margin: 10px auto;
+
+            grid-template-columns: repeat(7, 1fr) 4fr;
+            &>* {align-self:center;} //vertically center each item
+            *:nth-child(1) { //name
+                order: 1; grid-column: 1/8; justify-self: start; text-align: left; } 
+            *:nth-child(2) { //rating stars
+                order: 3; justify-self: start; } 
+            *:nth-child(3) { //mi away
+                order: 2; justify-self: end; } 
+            *:nth-child(4) { //btn visit website
+                order: 4; grid-column: 5/-1; justify-self: end;}
+            p {
+                font-size: 0.9rem;
+            }
+            h2 {
+                margin: 0;
+            }
+            img { //rating stars
+                width: 10vw;
+                min-width: 100px;
+                max-width: 150px;
+            }
+            .btn-general {
+                font-size: 0.9rem;
+                width: 135px;
+            }
+        }
+        @include for-desktop { //.growers-g .card-details-g
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+            margin: 10px 0 20px 0;
+            &>* {justify-self:center;} //horizontally center each item
+            *:nth-child(1) {order:1}
+            *:nth-child(2) {order:2}
+            *:nth-child(3) {order:3}
+            *:nth-child(4) {order:4}
+            
+            img { //rating stars
+                display: block;
+                margin: 0 auto;
+                width: 12vw;
+                min-width: 100px;
+                max-width: 140px;
+            }
+            .btn-general {
+                width: 135px;
+            }
+        }
+        @include for-wide-desktop {}
+    }
+    // end .card-details-g
+    
+
+    .card-hero { //.growers-g .cardhero
         width: 100%;
         object-fit: cover;
         object-position: 50% 50%;
 
-        @include for-mobile { //.growers-g .card .card-hero
+        @include for-mobile { //.growers-g .card-hero
                 height: 160px;
         }
-        @include for-desktop { //.growers-g .card .card-hero
+        @include for-desktop { //.growers-g .card-hero
             // overflow: hidden;
         }
         
@@ -198,10 +199,75 @@
 }
 // end .growers-g
 
-.show-grower {
+.page.show-entry {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 4vw;
+    text-align: left;
 
-    img {
+    main {
+        margin: 30px 0;
+    }
+    header img {
+        margin: 20px 0;
         max-width: 100%;
     }
 
+}
+
+
+.show-details-g {
+    display: grid;
+    // grid-template-rows: 200px 50px 50px;
+    // grid-template-columns: 1fr 1fr;
+    // grid-auto-flow: column;
+    grid-column-gap: 10px;
+    // grid-template-areas:
+    //     "a b"
+    //     "a b"
+    //     "a b";
+
+    .meta {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+
+        font-size: 0.85rem;
+    }
+    .buttons {
+        margin-top: 10px;
+        text-align: right;
+    }
+}
+
+#comments {
+    margin-bottom: 20px;
+    
+    h1 {
+        font-size: 2rem;
+        border-bottom: 1px solid $gray-light;
+    }
+}
+.comment-g {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+    
+    .buttons > * {
+        display: inline-block;
+    }
+}
+.comment-owner {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+.comment-text {
+    font-size: 1.2rem;
+}
+
+.page.about {
+    text-align: left;
+    margin: 40px 20px;
 }

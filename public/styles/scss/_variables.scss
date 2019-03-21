@@ -8,6 +8,7 @@ $ff-general: "Open Sans";
 // Colors ////////////////////////////////////
 
 $black-text: hsl(0, 0%, 10%);
+$gray-light: hsl(0, 0%, 85%);
 
 $green-mid: hsl(107, 30%, 48%);
 $green-dark: hsl(117, 35%, 30%);
@@ -26,7 +27,7 @@ $btn-edit-bg: $yellow-mustard;
 $btn-delete-bg: $red-dull;
 
 
-// Dimensions ////////////////////////////////////
+// Spacing & Dimensions //////////////////////////////
 
 $nav-height: 80px;
 $spacer-factor: 0.5;
@@ -37,3 +38,5 @@ $hamb-icon-size: 48px;
 $hamb-icon-line-size: $hamb-icon-size / 7.5;
 $hamb-icon-line-spacer: ($hamb-icon-size / 7.5) * 2;
 $hamb-icon-height: $hamb-icon-size * 2/3;
+
+$content-width: 992px;

@@ -12,6 +12,7 @@ const mobileLinks = d.querySelector('#mobile-menu .nav-links');
 const brand = d.querySelector('.brand');
 const offMenu = d.querySelector('.off-menu');
 const body = d.querySelector('body');
+const navbar = d.querySelector('.navbar-f');
 var isMenuOpen = false;
 var isResizeListener = false;
 var isOffMenuListener = false;
@@ -49,6 +50,7 @@ const toggleMobileMenu = () => {
     hambIcon.classList.toggle('open');
     mobileLinks.classList.toggle('hidden');
     brand.classList.toggle('hidden');
+    navbar.classList.toggle('open');
     // body.classList.toggle('no-scroll');
 
     console.log(isMenuOpen ? 'now closing menu' : 'now opening menu');

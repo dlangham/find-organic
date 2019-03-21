@@ -1,56 +1,77 @@
 <% include ../partials/header %>
-<div class="page">
-<div class="show-grower">
 
-<a href="/growers">Back to Search</a>
+<div class="page show-entry">
 
 <main>
-    <img src="<%= '../images/' + grower.image %>">
-    
-        <h1><a><%= grower.name %></a></h1>
+    <p class="gray-out">Breadcrumb</p>
+    <a href="/growers">Back to Your Search</a>
+
+    <header>
+        <img src="<%= '../images/' + grower.image %>">
+        <h1><%= grower.name %></h1>    
+    </header>
+
+    <div class="show-details-g">
+
         <p><%= grower.description %></p>
-        <p>
-            <em>Submitted By: <%= grower.author.username %></em>
-        </p>
-        <% if (currentUser && grower.author.id.equals (currentUser._id)) {%>
-            <a class="btn-edit" href="/growers/<%= grower._id %>/edit">Edit Grower</a>
-            <button class="btn-delete" href="/growers/<%= grower._id %>/edit">Delete Grower</button>
-            <!-- <form class="delete-form" action="/growers/<%= grower._id %>?_method=DELETE" method="POST">
-                <button class="btn-delete">Delete Grower</button>
-            </form> -->
-        <% } %>
+        <div class="meta">
+            <ul>
+                <li>Last Updated - March 20, 2018
+                <li>Originally Submitted - March 3, 2018
+                <li>Submitted By -
+                    <em><%= grower.author.username %></em></>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <% if (currentUser && grower.author.id.equals (currentUser._id)) {%>
+                User Options - 
+                <a class="btn-edit" href="/growers/<%= grower._id %>/edit">Edit</a>
+                <button class="btn-delete" href="/growers/<%= grower._id %>/edit">Delete</button>
+                <!-- <form class="delete-form" action="/growers/<%= grower._id %>?_method=DELETE" method="POST">
+                    <button class="btn-delete">Delete Grower</button>
+                </form> -->
+            <% } %>
+
+        </div>
+        <!-- /.buttons -->
+
+    </div>
+    <!-- /.show-details-g -->
 </main>
 
-<div class="well">
-    <div class="text-right">
-        <a class="btn btn-success" href="/growers/<%= grower._id %>/comments/new">Add New Comment</a>
-    </div>
+<aside id="comments">
+
+    <h1>Comments</h1>
+
+    <p class="gray-out">Search Comments</p>
+    <a class="btn-general" href="/growers/<%= grower._id %>/comments/new">Add New Comment</a>
+
     <% grower.comments.forEach((comment) => { %>
-        <hr>
-        <div class="row">
-            <div class="col-md-12">
-                <strong><%= comment.author.username %></strong>
-                <span class="pull-right">10 days ago</span>
-                <p>
-                    <%= comment.text %> 
-                </p>
-                <% if (currentUser && comment.author.id.equals(currentUser._id)) { %>
-                <p>
-                    <a class="btn btn-xs btn-warning" href="/growers/<%= grower._id %>/comments/<%= comment._id %>/edit">Edit Comment</a>
-                    <form class="delete-form" action="/growers/<%= grower._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-xs btn-danger">Delete Comment</button>
-                    </form>
-                </p>
-                <% } %>
+        <div class="comment-g">
+
+            <p>
+                <span class="comment-owner"><%= comment.author.username %></span> 10 days ago
+            </p>
+            <p class="comment-text">
+                <%= comment.text %>
+            </p>
+            <% if (currentUser && comment.author.id.equals(currentUser._id)) { %>
+            <div class="buttons">
+                <a class="btn-edit" href="/growers/<%= grower._id %>/comments/<%= comment._id %>/edit">Edit Comment</a>
+                <form class="delete-form" action="/growers/<%= grower._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                    <button class="btn-delete">Delete Comment</button>
+                </form>
             </div>
+            <% } %>
         </div>
     <% }) %>
-    <a href="/growers">Go Back To All Growers</a>
-</div>
+
+    <a href="/growers">Back To Your Search</a>
+
+</aside>
 
 </div>
-<!-- /.show-grower -->
+<!-- /.page.show-entry -->
 
-</div>
-<!-- /.page -->
 <% include ../partials/footer %>

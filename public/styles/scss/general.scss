@@ -109,8 +109,30 @@ img {
     // border-color: $btn-delete-bg;
 }
 .flash {
-    // @extend %container;
+    @extend %container;
+
+    position: fixed;
+    top: $nav-height;
+    text-align: center;
+    z-index: 10;
+
+}
+%flash-box {
+    display: inline-block;
+    // margin: 40px 0 0 0;
+    padding: 20px 40px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: auto;
+}
+.flash-info {
+    @extend %flash-box;
+    background-color: hsl(245, 100%, 75%);
 }
 .flash-danger {
-    background-color: tomato;
+    @extend %flash-box;
+    background-color: $yellow-mustard;
 }

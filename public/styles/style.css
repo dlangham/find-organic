@@ -6,6 +6,13 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0; }
 
+.gray-out {
+  color: #d9d9d9 !important; }
+  .gray-out::before {
+    content: '>'; }
+  .gray-out::after {
+    content: '<'; }
+
 .hidden {
   display: none !important; }
 
@@ -45,6 +52,9 @@ a:active {
   h2 {
     font-size: 1.4rem; } }
 
+.flash {
+  width: 100%; }
+
 .btn-general, .btn-cta, .btn-edit, .btn-delete {
   display: inline-block;
   padding: .375rem .75rem;
@@ -76,8 +86,27 @@ a:active {
 .btn-delete {
   background-color: #c16349; }
 
+.flash {
+  position: fixed;
+  top: 80px;
+  text-align: center;
+  z-index: 10; }
+
+.flash-info, .flash-danger {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  width: auto; }
+
+.flash-info {
+  background-color: #8a80ff; }
+
 .flash-danger {
-  background-color: tomato; }
+  background-color: #dec62b; }
 
 .top-a {
   position: absolute;
@@ -104,7 +133,9 @@ a:active {
       padding: 0 40px; } }
   @media only screen and (max-width: 767.98px) {
     .navbar-f {
-      padding: 0 20px; } }
+      padding: 0 20px; }
+      .navbar-f.open {
+        z-index: 11; } }
   .navbar-f a:link,
   .navbar-f a:visited,
   .navbar-f a:hover,
@@ -231,10 +262,6 @@ a.brand {
     .page {
       margin: 40px 20px; } }
 
-.page.about {
-  text-align: left;
-  margin: 40px 20px; }
-
 .hero {
   background: center no-repeat white;
   background-size: cover;
@@ -291,8 +318,8 @@ a.brand {
   @media only screen and (min-width: 768px) {
     .greeting {
       width: 80%;
-      max-width: 1000px;
-      padding: 30px 60px;
+      max-width: 992px;
+      padding: 30px 40px;
       border-radius: 10px; } }
 
 .growers-g {
@@ -322,67 +349,70 @@ a.brand {
       margin: 0; }
     @media only screen and (max-width: 767.98px) {
       .growers-g .card {
-        border-bottom: 8px solid #d9d9d9; } }
+        border-bottom: 1px solid #d9d9d9; } }
     @media only screen and (min-width: 768px) {
       .growers-g .card {
         border: 1px solid #d9d9d9;
         border-radius: 5px; } }
-    .growers-g .card .details-g {
-      display: grid; }
-      @media only screen and (max-width: 767.98px) {
-        .growers-g .card .details-g {
-          width: 95%;
-          max-width: 600px;
-          margin: 10px auto;
-          grid-template-columns: repeat(7, 1fr) 4fr; }
-          .growers-g .card .details-g > * {
-            align-self: center; }
-          .growers-g .card .details-g *:nth-child(1) {
-            order: 1;
-            grid-column: 1/8;
-            justify-self: start;
-            text-align: left; }
-          .growers-g .card .details-g *:nth-child(2) {
-            order: 3;
-            justify-self: start; }
-          .growers-g .card .details-g *:nth-child(3) {
-            order: 2;
-            justify-self: end; }
-          .growers-g .card .details-g *:nth-child(4) {
-            order: 4;
-            grid-column: 5/-1;
-            justify-self: end; }
-          .growers-g .card .details-g p {
-            font-size: 0.9rem; }
-          .growers-g .card .details-g h2 {
-            margin: 0; }
-          .growers-g .card .details-g img {
-            width: 10vw;
-            min-width: 100px;
-            max-width: 150px; }
-          .growers-g .card .details-g .btn-general {
-            font-size: 0.9rem;
-            width: 135px; } }
-      @media only screen and (min-width: 768px) {
-        .growers-g .card .details-g {
-          grid-template-columns: repeat(1, 1fr);
-          grid-gap: 10px; }
-          .growers-g .card .details-g h2 {
-            margin: 10px 0; }
-          .growers-g .card .details-g *:nth-child(1) {
-            order: 1; }
-          .growers-g .card .details-g *:nth-child(2) {
-            order: 2; }
-          .growers-g .card .details-g *:nth-child(3) {
-            order: 3; }
-          .growers-g .card .details-g *:nth-child(4) {
-            order: 4; }
-          .growers-g .card .details-g img {
-            display: block;
-            margin: 0 auto;
-            width: 12vw;
-            min-width: 100px;
-            max-width: 140px; } }
+  .growers-g .card-details-g {
+    display: grid; }
+    @media only screen and (max-width: 767.98px) {
+      .growers-g .card-details-g {
+        width: 95%;
+        max-width: 600px;
+        margin: 10px auto;
+        grid-template-columns: repeat(7, 1fr) 4fr; }
+        .growers-g .card-details-g > * {
+          align-self: center; }
+        .growers-g .card-details-g *:nth-child(1) {
+          order: 1;
+          grid-column: 1/8;
+          justify-self: start;
+          text-align: left; }
+        .growers-g .card-details-g *:nth-child(2) {
+          order: 3;
+          justify-self: start; }
+        .growers-g .card-details-g *:nth-child(3) {
+          order: 2;
+          justify-self: end; }
+        .growers-g .card-details-g *:nth-child(4) {
+          order: 4;
+          grid-column: 5/-1;
+          justify-self: end; }
+        .growers-g .card-details-g p {
+          font-size: 0.9rem; }
+        .growers-g .card-details-g h2 {
+          margin: 0; }
+        .growers-g .card-details-g img {
+          width: 10vw;
+          min-width: 100px;
+          max-width: 150px; }
+        .growers-g .card-details-g .btn-general {
+          font-size: 0.9rem;
+          width: 135px; } }
+    @media only screen and (min-width: 768px) {
+      .growers-g .card-details-g {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        margin: 10px 0 20px 0; }
+        .growers-g .card-details-g > * {
+          justify-self: center; }
+        .growers-g .card-details-g *:nth-child(1) {
+          order: 1; }
+        .growers-g .card-details-g *:nth-child(2) {
+          order: 2; }
+        .growers-g .card-details-g *:nth-child(3) {
+          order: 3; }
+        .growers-g .card-details-g *:nth-child(4) {
+          order: 4; }
+        .growers-g .card-details-g img {
+          display: block;
+          margin: 0 auto;
+          width: 12vw;
+          min-width: 100px;
+          max-width: 140px; }
+        .growers-g .card-details-g .btn-general {
+          width: 135px; } }
   .growers-g .card-hero {
     width: 100%;
     object-fit: cover;
@@ -391,8 +421,54 @@ a.brand {
       .growers-g .card-hero {
         height: 160px; } }
 
-.show-grower img {
-  max-width: 100%; }
+.page.show-entry {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 4vw;
+  text-align: left; }
+  .page.show-entry main {
+    margin: 30px 0; }
+  .page.show-entry header img {
+    margin: 20px 0;
+    max-width: 100%; }
+
+.show-details-g {
+  display: grid;
+  grid-column-gap: 10px; }
+  .show-details-g .meta {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    font-size: 0.85rem; }
+  .show-details-g .buttons {
+    margin-top: 10px;
+    text-align: right; }
+
+#comments {
+  margin-bottom: 20px; }
+  #comments h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid #d9d9d9; }
+
+.comment-g {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9; }
+  .comment-g .buttons > * {
+    display: inline-block; }
+
+.comment-owner {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 15px; }
+
+.comment-text {
+  font-size: 1.2rem; }
+
+.page.about {
+  text-align: left;
+  margin: 40px 20px; }
 
 .colophon {
   height: 260px;

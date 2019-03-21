@@ -26,6 +26,9 @@
     }
     @include for-mobile {
         padding: 0 20px;
+        &.open {
+            z-index: 11;
+        }
 
     }
     
@@ -59,7 +62,6 @@ a.brand {
 }
 #mobile-menu {
     flex-grow: 1;
-    // padding: 30px 20px;
     padding: (($nav-height - $hamb-icon-height) / 2) 20px;
     min-height: $nav-height;
 
